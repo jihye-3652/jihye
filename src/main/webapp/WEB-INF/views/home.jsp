@@ -39,7 +39,7 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 	  return zero + num;
 }
 </script>
-	<title>Home</title>
+	<title>Jihye's</title>
 </head>
 <body>
 
@@ -49,7 +49,7 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 
 
 <h1>
-	Hello world!  
+	Welcome to my web-site♥ 
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
