@@ -35,5 +35,15 @@ public class HomeController {
 		
 		return "home";
 	}
+	@RequestMapping(value = "/htmltest", method = RequestMethod.GET)
+	public String htmltest(Locale locale, Model model) {
+		
+		
+		return "htmltest";
+	}
+@RequestMapping(value = "/blog", method = RequestMethod.GET)
+public String blog(Locale locale, Model model) {
 	
-}
+	
+	return "blog";}
+    }

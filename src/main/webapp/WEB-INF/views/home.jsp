@@ -1,57 +1,100 @@
-<%@ page contentType="text/html; charset=utf-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
+<%@ page contentType="text/html; charset=utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+
+<!DOCTYPE HTML>
+<html lang="ko">
 <head>
-<script>
-
-function printClock() {
-    
-    var clock = document.getElementById("clock");            // 출력할 장소 선택
-    var currentDate = new Date();                                     // 현재시간
-    var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
-    var amPm = 'AM'; // 초기값 AM
-    var currentHours = addZeros(currentDate.getHours(),2); 
-    var currentMinute = addZeros(currentDate.getMinutes() ,2);
-    var currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    
-    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
-    	amPm = 'PM';
-    	currentHours = addZeros(currentHours - 12,2);
-    }
-
-    if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
-       currentSeconds = '<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
-    clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
-    
-    setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
+<title>1.반응형 웹구조 준비하기</title>
+<link ref="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed"
+	href="/images/favicon/home-touch-icon.png">
+<script src=/js/jquery.min.js"></script>
+<style>
+/* 모바일용 CSS */
+/* 기본 CSS */
+.container {
+	width: 90%;
+	max-width: 1132px;
+	margin: 0 auto;
 }
 
-function addZeros(num, digit) { // 자릿수 맞춰주기
-	  var zero = '';
-	  num = num.toString();
-	  if (num.length < digit) {
-	    for (i = 0; i < digit - num.length; i++) {
-	      zero += '0';
-	    }
-	  }
-	  return zero + num;
+.cfixed:after, .container:after {
+	display: block;
+	content: "";
+	clear: both;
 }
-</script>
-	<title>Jihye's</title>
+
+.blind {
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.sec-tit {
+	font-size: 42px;
+	color: #3f51b5;
+	font-weight: normal;
+}
+
+.divider {
+	width: 90%;
+	max-width: 1132px;
+	margin: 0 auto;
+	margin-top: 77px;
+	background: #eee;
+}
+
+.m-divider {
+	width: 20px;
+	margin: 0 auto;
+	margin-top: 77px;
+	background: #3f51b5;
+}
+/* 태블릿용 CSS */
+.divider {
+	margin-top: 124px;
+}
+
+.m-divider {
+	margin-top: 124px;
+}
+/* PC용 CSS */
+@media all and (min-width:1132px) {
+}
+</style>
 </head>
 <body>
-
-<body onload="printClock()">
-	<div style="border:1px solid #dedede; width:600px; height:250px; line-height:250px; color:#666;font-size:100px; text-align:center;" id="clock">
+	<div id="wrap">
+		<header class="header cfixed">
+			<h1 class="logo">
+				<a href="">LOGO</a>
+			</h1>
+			<nav>
+				<ul class="gnb">
+					<li><a href="">HOME</a></li>
+					<li><a href="">WE ARE</a></li>
+					<li><a href="">WORK</a></li>
+					<li><a href="">BLOG</a></li>
+					<li><a href="">CONTACT US</a></li>
+				</ul>
+			</nav>
+			<span class="menu-toogle-btn"> <span></span> <span></span> <span></span>
+			</span>
+		</header>
+		<article class="slider">
+			<img src="/images/slide1.jpg" alt="">
+		</article>
+		<footer class="footer">
+			<p class="copyright">LOGO</p>
+		</footer>
 	</div>
-
-
-<h1>
-	Welcome to my web-site♥ 
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
