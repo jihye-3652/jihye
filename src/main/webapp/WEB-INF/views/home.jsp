@@ -53,6 +53,7 @@ font-size:26px;
 color:cadetblue;
 font-weight:normal;
 }
+
 .header .gnb{
 display:none;
 position:absolute;
