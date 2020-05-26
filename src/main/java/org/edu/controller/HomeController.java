@@ -16,34 +16,56 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-		
+
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+
 		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+
+		model.addAttribute("serverTime", formattedDate);
+
+		return "HOME";
 	}
-	@RequestMapping(value = "/htmltest", method = RequestMethod.GET)
-	public String htmltest(Locale locale, Model model) {
-		
-		
-		return "htmltest";
+
+	@RequestMapping(value = "/HTMLTEST", method = RequestMethod.GET)
+	public String HTMLTEST(Locale locale, Model model) {
+
+		return "HTMLTEST";
 	}
-@RequestMapping(value = "/blog", method = RequestMethod.GET)
-public String blog(Locale locale, Model model) {
-	
-	
-	return "blog";}
-    }
+
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test(Locale locale, Model model) {
+
+		return "test";
+	}
+
+	@RequestMapping(value = "/BLOG", method = RequestMethod.GET)
+	public String BLOG(Locale locale, Model model) {
+
+		return "BLOG";
+	}
+	@RequestMapping(value = "/WEARE", method = RequestMethod.GET)
+	public String WEARE(Locale locale, Model model) {
+
+		return "WEARE";
+	}
+	@RequestMapping(value = "/WORK", method = RequestMethod.GET)
+	public String WORK(Locale locale, Model model) {
+
+		return "WORK";
+	}
+	@RequestMapping(value = "/CONTACTUS", method = RequestMethod.GET)
+	public String CONTACTUS(Locale locale, Model model) {
+
+		return "CONTACTUS";
+	}
+}
