@@ -16,6 +16,7 @@
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
 <script>
+				
 </script>
 <style>
 /* WE ARE 영역 CSS */
@@ -40,9 +41,7 @@ margin-top:50px;
 margin-top:52px;
 text-align:center;
 }
-.promotion-section .promo-list li:first-child{
-margin-top:-30px;
-}
+
 .promotion-section .promo-list li img{
 height:52px;
 }
@@ -56,6 +55,34 @@ font-size:14px;
 font-family:'PT Serif';
 color:#616161;
 line-height:1.5;
+}
+
+/* 태블릿 WE ARE 영역 CSS */
+ @media all and (min-width:768px){
+  .display-section{
+  margin-top:95px;
+  }
+
+  /* 태블릿 WE ARE 내용 영역 CSS */
+  .promotion-section{
+  margin-top:110px;
+  }
+  .promotion-section .promo-list li{
+  float:left;
+  width:23.046875%;
+  /* 177px ÷ 768px*/
+  margin-left:2.604166666666667%;
+  /* 20px ÷ 768px*/
+  margin-top:0;
+  }
+  /* [가변그리드공식] = 결과는 % 단위 입니다.
+  [가변element값 %] = (가변크기로 만들 박스의 가로 너비 / 가변그키로 만들 박스를 감싸고 있는 박스의 가로 너비) X 100 
+  [가변마진값 %] = (가변 마진을 적용할 마진값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  [가변패딩값 %] = (가변 패딩을 적용할 패딩값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  */
+  .promotion-section .promo-list li:first-child{
+  margin-left:0;
+  }
 }
 </style>
 </head>
@@ -80,6 +107,11 @@ line-height:1.5;
 		</header>
 		
 	</div>
+	
+		<article class="slider">
+            <img src="resources/images/aa.jpg" alt="LOGO">
+        </article>
+        
 	<section class="content">
 		<section class="display-section">
 		<div class="container">
@@ -95,28 +127,28 @@ line-height:1.5;
 			<div class="container">
 			<ul class="promo-list">
 				<li>
-				<a href="#">
+				<a href>
 					<img src="/resources/images/a.jpg" alt="">
 					<h3>HOME</h3>
 					<p>Unknown file added by Jihye.</p>
 				</a>
 				</li>
 				<li>
-				<a href="#">
+				<a href>
 					<img src="/resources/images/a.jpg" alt="">
 					<h3>WE ARE</h3>
 					<p>Unknown file added by Jihye.</p>
 				</a>
 				</li>
 				<li>
-				<a href="#">
+				<a href>
 					<img src="/resources/images/a.jpg" alt="">
 					<h3>WORK</h3>
 					<p>Unknown file added by Jihye.</p>
 				</a>
 				</li>
 				<li>
-				<a href="#">
+				<a href>
 					<img src="/resources/images/a.jpg" alt="">
 					<h3>BLOG</h3>
 					<p>Unknown file added by Jihye.</p>

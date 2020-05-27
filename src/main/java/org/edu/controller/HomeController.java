@@ -68,4 +68,10 @@ public class HomeController {
 
 		return "CONTACTUS";
 	}
+	@RequestMapping(value = "/test2", method = RequestMethod.GET)
+	public String test2(Locale locale, Model model) {
+
+		return "test2";
+	}
+	
 }

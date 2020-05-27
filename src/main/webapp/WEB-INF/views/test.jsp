@@ -7,10 +7,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
-<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<link rel="stylesheet" type="text/css" href="#" onclick="return false" onclick="return false"="/resources/css/reset.css">
+<link rel="shortcut icon" href="#" onclick="return false" onclick="return false"="/images/favicon/favicon.ico">
 <link rel="apple-touch-icon-precomposed"
-	href="/images/favicon/home-touch-icon.png">
+	href="#" onclick="return false" onclick="return false"="/images/favicon/home-touch-icon.png">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(document).ready(function($) {
@@ -32,7 +32,7 @@ h4{
     <img src="/resources/images/a.jpg" alt="나무사진" 
     width="300px" height="400px">
     <div class="a"></div>
-    <a href="/test"> 페이지 다시로딩 불러오기</a>
+    <a href="#" onclick="return false" onclick="return false"="/test"> 페이지 다시로딩 불러오기</a>
     
     
     <p>
