@@ -91,7 +91,6 @@ color:#3f51b5;
 text-align:center;
 }
 
-
  /*태블릿용.css*/
  @media all and (min-width:768px){
   /* 태블릿 공통 CSS */
@@ -134,4 +133,7 @@ text-align:center;
   margin:34px 0;
   }
 }
- 
+
+/* PC용 CSS */
+@media all and (min-width:1132px){
+}

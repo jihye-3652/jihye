@@ -87,7 +87,7 @@ color:#fff;
 display:block;
 width:100%;
 max-width:100%;
-height:auto;
+height:300px;
 }
 
  
@@ -111,6 +111,16 @@ height:auto;
 
   .work-section .work-list li a:hover .info{
   transform:translateY(37px);
+  }
+  }
+  
+   /* PC WORK 영역 CSS */
+   @media all and (min-width:1132px){
+  .work-section .sec-tit{
+  text-align:left;
+  }
+  .work-section .work-list li{
+  width:25%;
   }
   }
  </style>
@@ -156,7 +166,7 @@ height:auto;
                     <h3>Work2</h3>
                     <span>Sources/work2</span>
                  </div>
-                 <img src="/resources/images/bb.jpg" alt="">
+                 <img src="/resources/images/eee.jpg" alt="">
                 </a>
             </li>
             <li>
@@ -165,7 +175,7 @@ height:auto;
                     <h3>Work3</h3>
                     <span>Sources/work3</span>
                  </div>
-                 <img src="/resources/images/kk.jpg" alt="">
+                 <img src="/resources/images/KI.jpg" alt="">
                 </a>
             </li>
             <li>
@@ -174,7 +184,7 @@ height:auto;
                     <h3>Work4</h3>
                     <span>Sources/work4</span>
                  </div>
-                 <img src="/resources/images/hh.jpg" alt="" >
+                 <img src="/resources/images/cc.jpg" alt="" >
                 </a>
             </li>
             <li>
@@ -183,7 +193,7 @@ height:auto;
                     <h3>Work5</h3>
                     <span>Sources/work5</span>
                  </div>
-                 <img src="/resources/images/eee.jpg" alt="" >
+                 <img src="/resources/images/hh.jpg" alt="" >
                 </a>
             </li>
             <li>
@@ -192,7 +202,7 @@ height:auto;
                     <h3>Work6</h3>
                     <span>Sources/work6</span>
                  </div>
-                 <img src="/resources/images/KI.jpg" alt="" >
+                 <img src="/resources/images/ee.jpg" alt="" >
                 </a>
             </li>
             <li>
@@ -201,7 +211,7 @@ height:auto;
                     <h3>Work7</h3>
                     <span>Sources/work7</span>
                  </div>
-                 <img src="/resources/images/ee.jpg" alt="" >
+                 <img src="/resources/images/ff.jpg" alt="" >
                 </a>
             </li>
             <li>

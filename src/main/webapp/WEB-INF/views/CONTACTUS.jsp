@@ -21,6 +21,291 @@
 				
 </script>
 <style>
+.center { margin: 0 auto; }
+    .row {
+      /* overflow: hidden; */
+      width: 100%;
+      max-width: 960px;
+      min-width: 748px;
+      margin: 0 auto;
+    }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+      float: left;
+      margin-right: 3.8%;
+      min-height: 1px;
+    }
+    .row .col-1  { width: 4.85%;	}
+    .row .col-2  { width: 13.45%;	}
+    .row .col-3  { width: 22.05%;	}
+    .row .col-4  { width: 30.75%;	}
+    .row .col-5  { width: 39.45%;	}
+    .row .col-6  { width: 48%;	}
+    .row .col-7  { width: 56.75%;	}
+    .row .col-8  { width: 65.4%;	}
+    .row .col-9  { width: 74.05%;	}
+    .row .col-10 { width: 82.7%;	}
+    .row .col-11 { width: 91.35%;	}
+    .row .col-12 { width: 100%; float: left; }
+    .last { margin-right: 0; } /* col 마지막 요소의 마진값을 없애서 레이아웃이 깨지는 것을 방지 */
+    [class^=col]>:first-child { margin-top: 0; }
+    img, object, embed, iframe { max-width: 100%; }
+    img, iframe { height: auto; }
+    .fr { float: right; }
+
+    /* Tablet Size: 960px 이하 */
+    @media all and (max-width: 960px) {
+      body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .row, body, .container {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5, .row .col-6, 
+      .row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
+        float: none;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  </style>
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    body, h1, h2, h3, h4, h5, h6, li, p { font-family:"Nanum Gothic","NanumGothic" !important ; font-size:14px;line-height:24px; }
+    body { margin:0px; padding:0px; }
+    /* 속성설명
+    -webkit- : 구글, 사파리 브라우저에 적용
+    -moz- : 파이어폭스 브라우저에 적용
+    -ms- : 익스플로러에 적용, 보통 생략합니다.
+    -o- : 오페라 브라우저에 적용
+    */
+    body header {
+      background: url(/rs_web/include/images/header-bg.jpg) no-repeat 50% 55%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      position:fixed;
+      width:100%;
+      top:0px;
+      height:90px;
+      z-index:999;
+    }
+    body > section {
+      margin-top:90px; 
+    }
+    body ul, body ol {
+      padding: 0;
+      list-style: none;
+    }
+    body header .row #gnb,
+    body header .row {
+      position: relative;
+      margin: 0 auto;
+    }
+    body header .row #brand {
+      background: url(/rs_web/include/images/footer-logo.png) no-repeat 0 50%;
+      height: 90px;
+      width: 90px;
+      margin:0px;
+      text-indent: -10000px;
+    }
+    body header .row #brand:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    body header .row #brand:hover:before {
+      top: 35px;
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    body header .row #gnb {
+      position: absolute;
+      top: 35px;
+      right: 0;
+    }
+    body header .row #gnb ul {
+      margin: 0;
+    }
+    body header .row #gnb ul li {
+      float: left;
+      margin-right: 30px;
+    }
+    body header .row #gnb ul li:last-child { /*오른쪽 마진 값을 제거하지 않으면 float drop 현상이 발생*/
+      margin-right: 0;
+    }
+    body header .row #gnb ul li a {
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 2px #282020;
+    }
+    body header .row #gnb ul li a:hover, body header .row #gnb ul li a:focus {
+      color: #fff;
+      text-shadow: none;
+      font-weight:bold;
+    }
+    body section#contents h2, body section#contents h3 {
+      position: relative;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #e1dcda;
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height:34px;
+      color: #21759A;
+      padding:20px;
+    }
+    body section#contents h2:before, body section#contents h3:before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 1px;
+      background: #21759A;
+      top: -10px;
+      left: -36px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    body section#contents li {
+      margin-bottom: 60px;
+    }
+    body section#contents li img {
+      border: 1px solid #e0e0e0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    body section#contents li h4, body section#contents li h5 {
+      font-size: 22px;
+    }
+    body section#contents li h5 {
+      margin-top: 22px;
+      margin-bottom: 32px;
+    }
+    body section#contents li p {
+      font-size: 14px;
+      line-height:24px;
+      color: #818181;
+    }
+    body footer {
+      border-top: 1px solid #e2e2e2;
+      padding-top: 20px;
+    }
+    body footer p {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: url(/rs_web/include/images/footer-logo.png) no-repeat 100% 50%;
+    }
+    body footer p small {
+      display: block;
+      line-height: 1.2;
+    }
+    body footer p small a:link, body footer p small a:visited {
+      color: #606060;
+      text-decoration: none;
+    }
+    body footer p small a:hover, body footer p small a:active {
+      color: #212121;
+    }
+    ::selection {
+      background-color: #eee7dd;
+      color: #542e1c;
+    }
+    ::-moz-selection {
+      background-color: #eee7dd;
+      color: #542e1c;
+    }
+    /* 태블릿: 960 이하 */
+    @media all and (max-width: 960px) {
+       body section#contents li,
+      .row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5, .row .col-6, 
+      .row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
+        text-align:center;
+      }
+      body header,
+      body section#contents,
+      body footer {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+      }
+      section.banner_slider { display:none; }
+      body section#contents { margin-top: 90px; }
+      nav > ul { display: none;}
+      body header { z-index:999; }
+      body header .hamberger { float:right; }
+      body header a#pull {
+        position:relative;
+        top:-55px;
+      }
+      body header a#pull:after {
+        content:"";
+        background: url('/metro/images/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0px;
+      }
+      body header .row #gnb {
+        position: static;
+      }
+      body header .row #gnb ul { background-color: #fff; width:100%; }
+      body header .row #gnb ul li {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 1px;
+        border-top: 1px solid #555;
+        border-bottom: 1px solid #555;
+        padding: 10px 30px;
+        background-color: rgba(56, 56, 56, 1);
+      }
+      body header .row #gnb ul li:hover, body header .row #gnb ul li:active {
+        background-color: rgba(0, 0, 0, 1);
+      }
+      body header .row #gnb ul li a {
+        color: #fff;
+        text-shadow: none;
+      }
+      section#contents #main img, section#contents #sub img {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        background: #fff;
+      }
+      footer p {
+        padding-top: 0px !important;
+        padding-bottom: 15px !important;
+        width:90% !important;
+        margin:0 auto !important;
+        background: none !important;
+      }
+    }
+    .nivo-caption { text-align:center !important; }
+    /* ///////////////////////////////////////// 
+    =.Global Classes
+    ///////////////////////////////////////// */
+    .clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .blind {
+      visibility: hidden;
+      position: absolute;
+      top: -10000px;
+      height: 1px;
+      width: 1px;
+    }
 /* CONTACT US 영역 CSS */
 .contact-section{
 margin-top:109px;
@@ -93,6 +378,27 @@ cursor:pointer;
   .contact-section .form-box .form input:last-child{
   margin-bottom:0;}
   }
+  
+  /* PC CONTACT US 영역 CSS */
+  @media all and (min-width:1132px){
+  .contact-section .sec-tit{
+  float:left;
+  margin-bottom:0;
+  }
+  .contact-section .form-box{
+  float:right;
+  width:74.5583038869258%;
+  /* 844px ÷ 1132px*/
+  }
+  .contact-section .form-box .form, .contact-section .form-box .textarea{
+  width:48.81516587677725%;
+  /* 412px ÷ 844px*/
+  }
+  .contact-section .form-box .form{
+  margin-right:2.369668246445498%;
+  /* 20px ÷ 844px*/
+  }
+}
 </style>
 </head>
 <body>
