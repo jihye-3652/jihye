@@ -321,13 +321,13 @@
                     }
                     if(menu.is(':hidden')){
                         //alert('열때');
-                        menu.slideToggle("fast");
+                        menu.slideToggle("slow");
                         return;
                     }
                   }
             });
           });
-        //모바일 -> PC원상복귀
+        //모바일 -> PC원상복귀 click 이벤트 끝.
         jQuery(function($){ 
           $(window).resize(function(){
               var w=$(window).width();
@@ -346,7 +346,7 @@
         <div class="hamberger"><a id="pull" href="javascript:;"></a></div>
 		<nav id="gnb">
 			<a href="#contents" class="blind">skip navigation</a>
-			<ul class="clearfix" style="display: block;">
+			<ul class="clearfix" style="display: none;">
 				<li><a href="javascript:;" title="Study CSS">Study CSS</a></li>
 				<li><a href="javascript:;" title="Study LIB">Study LIB</a></li>
 				<li><a href="javascript:;" title="Posts">Posts</a></li>
