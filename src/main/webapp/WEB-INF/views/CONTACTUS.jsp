@@ -204,7 +204,8 @@
     body footer p {
       padding-top: 40px;
       padding-bottom: 40px;
-      background: url(/rs_web/include/images/footer-logo.png) no-repeat 100% 50%;
+      margin:0;
+      background: url(/resources/images/logo_jicas.png) no-repeat 50% 50%;
     }
     body footer p small {
       display: block;

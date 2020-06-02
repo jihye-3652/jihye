@@ -194,7 +194,6 @@
     body footer p {
       padding-top: 40px;
       padding-bottom: 40px;
-      background: url(/resources/images/logo_jicas.png.png) no-repeat 100% 50%;
     }
     body footer p small {
       display: block;
@@ -296,6 +295,9 @@
       height: 1px;
       width: 1px;
     }
+  .nivo-caption {text-align: center;}
+  .nivoSlider{height: 548px !important;}
+  .nivoSlider img{height: 548px !important;}
   </style>
  	<script src="/resources/js/jquery.min.js"></script>
     <script type="text/javascript">
@@ -366,6 +368,7 @@
                   effect: 'slideInLeft',
                   directionNav: true,
                   controlNav: false,
+                  pauseOnHover:false,
                   prevText: '<span style="font-size:30px;color:#fff;padding-left:10px;"><</span>',
       			  nextText: '<span style="font-size:30px;color:#fff;padding-right:10px;">></span>',
             });
@@ -382,13 +385,13 @@
       <img src="/resources/images/banner.png" title="LOGO1" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
       <img src="/resources/images/banner2.png" title="LOGO2" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
       <img src="/resources/images/banner1.png" title="LOGO3" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
-      <img src="/resources/images/kk.jpg" title="슬라이드4" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
+      <img src="/resources/images/kk.jpg" title="슬라이드4" data-transition="slideInLeft" style="width: 100px; height: 548.5px; visibility: hidden;">
     </div>
   </section>
 	<section id="contents" class="row">
 		<article id="main">
-			<h2>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사 입니다. 
-			그리고, 부가 사업으로 노트북/LCD모니터 리페어(재생) 부분을 운영하고 있습니다.</h2>
+			<h2> The Specialty Coffee Association is a nonprofit, membership-based organization that represents thousands of coffee professionals, 
+			from producers to baristas all over the world.</h2>
 			<ul>
 				<li class="clearfix">
 				   <img class="col-4" src="/resources/images/aa.jpg" alt="" width="296" height="206" />

@@ -15,6 +15,157 @@
 	href="/images/favicon/home-touch-icon.png">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    body, h1, h2, h3, h4, h5, h6, li, p { font-family:"Nanum Gothic","NanumGothic" !important ; font-size:14px;line-height:24px; }
+    body { margin:0px; padding:0px; }
+
+/* 기본 CSS */
+.container { /* 박스 크기*/
+width:90%;
+max-width:1132px;
+margin:0 auto;  /* 0 상하여백 , auto 좌우여백*/
+}
+.cfixed:after, .container:after{ /* 전체 영역으로 1개 라인 모두 차지 */
+display:block;
+content:"";
+clear:both;
+}
+.sec-tit{ /* 페이지 타이틀 */
+font-size:42px;
+color:cadetblue;
+font-weight:normal;
+}
+.divider { /*page*/
+width:90%;
+max-width:1132px;
+margin-top:77px;
+background:#eee;
+}
+/* 헤더 영역 CSS */
+.header{
+position:relative;
+padding:18px 5%;
+}
+.header .logo{
+float:left;
+}
+.header .logo a{
+font-size:26px;
+color:#3f51b5;
+font-weight:normal;
+}
+.header .gnb{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#3f51b5;
+}
+.header .gnb li{
+border-bottom:1px solid #303f9f;
+}
+.header .gnb li a{
+display:block;
+padding:14px 0 14px 5%;
+font-size:14px;
+color:#fff;
+}
+.header .menu-toggle-btn{
+float:right;
+width:20px;
+margin-top:4px;
+cursor:pointer;
+}
+.header .menu-toggle-btn span{
+display:block;
+width:100%;
+height:2px;
+background:#3f51b5;
+}
+.header .menu-toggle-btn span:nth-child(2){
+margin:5px 0;
+}
+
+/* HOME 슬라이더 영역 CSS */
+.slider img{
+display:block;
+width:100%;
+max-width:100%;
+height:auto;
+}
+
+/* 푸터 영역 CSS */
+.footer{
+margin-top:104px;
+bottom: 0 0;
+color: white;
+background-color: cadetblue;
+}
+.footer iframe{
+width:100%;
+height:320px;
+}
+
+.footer p{
+margin:0;
+color: white;
+text-align:center;
+}
+body footer p {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin:0;
+      background: url(/resources/images/logo_jicas.png) no-repeat 50% 50%;
+    }
+
+ /*태블릿용.css*/
+ @media all and (min-width:768px){
+  /* 태블릿 공통 CSS */
+  /* 태블릿 공통 해더*/
+  .divider{
+  margin-top:124px;
+  }
+  /* 태블릿 헤더 영역 CSS */
+  .header{
+  position:static;
+  padding:28px 52px;
+  }
+  .header .gnb{
+  display:block !important;
+  position:static;
+  float:right;
+  width:auto;
+  margin-top:6px;
+  background:none;
+  }
+  .header .gnb li{
+  float:left;
+  margin-left:21px;
+  border-bottom:0;
+  }
+  .header .gnb li a{
+  padding:0;
+  font-size:16px;
+  color:#3f51b5;
+  }
+  .header .menu-toggle-btn{
+  display:none !important;
+  }
+
+  /* 태블릿 푸터 영역 CSS */
+  .footer iframe{
+  height:432px;
+  }
+  .footer p{
+  margin:0 0;
+  }
+}
+
+/* PC용 CSS */
+@media all and (min-width:1132px){
+}
+
 /* HOME 슬라이더 영역 CSS */
 .slider img {
 	display: block;
@@ -365,19 +516,25 @@ overflow:hidden;
   /* 20px ÷ 844px*/
   }
 }
+
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
+<!--사용자 스크립트  -->
 <script>
 				
 </script>
+<!-- 부트스트랩 -->
+ <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+ <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="wrap">
 		<header class="header cfixed">
-			<h1 class="logo">
-				<a href="">LOGO</a>
-			</h1>
+		<h1 class="logo">
+				<a href="javascript:;"><img src="/resources/images/logo_JICAC.png"></a></h1>
+		<div class="hamberger"><a id="pull" href="javascript:;"></a></div>
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
@@ -578,7 +735,7 @@ overflow:hidden;
 							</div>
 						</fieldset>
 						<div class="send-btn">
-							<button>Submit</button>
+							<button type="button" class="" data-toggle="modal" data-target="#exampleModal">Submit</button>
 						</div>
 					</form>
 				</div>	
@@ -592,12 +749,31 @@ overflow:hidden;
 		 83790497994078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b293c64087a5b%3A0x1873dee0e6399a00!2z67Cx7ISd66y47ZmU64yA7ZWZ6rWQ!
 		 5e0!3m2!1sko!2skr!4v1513569521608"
 		 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</footer>
-    <hr class="divider">
-		<footer class="footer">
-			<p class="copyright">LOGO</p>
+   		 <hr class="divider"></hr>
+		<p class="copyright"></p>
 		</footer>
 	</div>
-
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title★</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<input class="form-control" type="text" id="message" placeholder="Type here..."></input>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info">Modify</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn" data-dismiss="modal">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

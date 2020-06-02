@@ -31,21 +31,19 @@ float:left;
 }
 .header .logo a{
 font-size:26px;
-color:cadetblue;
+color:#3f51b5;
 font-weight:normal;
 }
-
 .header .gnb{
 display:none;
 position:absolute;
 top:100%;
 left:0;
 width:100%;
-background:cadetblue;
-z-index:21;
+background:#3f51b5;
 }
 .header .gnb li{
-border-bottom:1px solid rgb(69, 133, 103);
+border-bottom:1px solid #303f9f;
 }
 .header .gnb li a{
 display:block;
@@ -80,14 +78,18 @@ height:auto;
 /* 푸터 영역 CSS */
 .footer{
 margin-top:104px;
+bottom: 0;
+color: white;
+background-color: cadetblue;
 }
 .footer iframe{
 width:100%;
 height:320px;
 }
+
 .footer p{
-margin:21px 0;
-color:#3f51b5;
+margin:0 0;
+color: white;
 text-align:center;
 }
 
