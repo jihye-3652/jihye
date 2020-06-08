@@ -10,7 +10,7 @@
 <title>SLIDE1</title>
 <style>
   .center { margin: 0 auto; }
-  .row {
+ .row {
     /* overflow: hidden; */
     width: 100%;
     max-width: 960px;
@@ -64,7 +64,6 @@
         padding-right: 20px;
       }
     }
-  </style>
     <style>
     @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
     body, h1, h2, h3, h4, h5, h6, li, p { font-family:"Nanum Gothic","NanumGothic" !important ; font-size:14px;line-height:24px; }
@@ -298,7 +297,20 @@
   .nivo-caption {text-align: center;}
   .nivoSlider{height: 548px !important;}
   .nivoSlider img{height: 548px !important;}
+   .row{
+   	margin-right:auto !important;
+   	margin-left:auto !important;
+   }
+   .carousel-control .slide_arrow {
+   		top: 50%;
+   		position: absolute;
+   }
+   .carousel-inner .item img {
+   		height: 600px !important; 
+   		width: 100% !important;
+   		}
   </style>
+ 
  	<script src="/resources/js/jquery.min.js"></script>
     <script type="text/javascript">
     jQuery(function($){ //j쿼리 시작 : $(document).ready(function(){ }); == $(function(){ }); 과 동일
@@ -359,6 +371,8 @@
 		</nav>
 	   </div>
 	</header><!-- e:header-->
+  
+  <!-- 니보슬라이더 작동 스크립트 (아래)
   <script src="/resources/js/slider.js"></script>
   <link href="/resources/css/slider.css" media="screen" rel="stylesheet" type="text/css">
   <script type="text/javascript">
@@ -380,14 +394,75 @@
           });
     });
   </script>
+  style="width: 100px; visibility: hidden;"
+   -->
+   
+  <!-- 부트스트랩 -->
+    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script>	
+    //jQuery(function($){
+    $(document).ready(function($) {
+    		$('.carousel').carousel({
+    			  interval: 2000,
+    			  pause: false ////// 작동확인//////
+    			});
+    	});
+    </script>
+  
   <section class="banner_slider">
-  	<div id="slider" class="nivoSlider">
-      <img src="/resources/images/banner.png" title="LOGO1" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
-      <img src="/resources/images/banner2.png" title="LOGO2" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
-      <img src="/resources/images/banner1.png" title="LOGO3" data-transition="slideInLeft" style="width: 100px; visibility: hidden;">
-      <img src="/resources/images/kk.jpg" title="슬라이드4" data-transition="slideInLeft" style="width: 100px; height: 548.5px; visibility: hidden;">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="/resources/images/banner_1.png" class="d-block w-100" alt="...">
     </div>
+    <div class="item">
+      <img src="/resources/images/banner_2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/banner_3.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/banner_4.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <!-- <a class="left carousel-control" style="font-size:50px; font-weight:bold; color: darkolivegreen;"
+  href="#carouselExampleIndicators" data-slide="prev" onclick="('#myCarousel').carousel('prev')">
+  <span class="slider_arrow"> &lt;</span>
+  </a>
+  <a class="right carousel-control"style="font-size:50px; font-weight:bold; color: darkolivegreen;" 
+  href="#carouselExampleIndicators" data-slide="next" onclick="('#myCarousel').carousel('next')">
+  <span class="slider_arrow"> &gt;</span>
+  </a> -->
+  
+  <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev" style="">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+  <!--  slider img nivoSlider 
+  	<div id="slider" class="nivoSlider">
+      <img src="/resources/images/banner.png" title="LOGO1" data-transition="slideInLeft" >
+      <img src="/resources/images/banner2.png" title="LOGO2" data-transition="slideInLeft">
+      <img src="/resources/images/banner1.png" title="LOGO3" data-transition="slideInLeft" >
+      <img src="/resources/images/kk.jpg" title="슬라이드4" data-transition="slideInLeft">
+    </div>
+    -->
+    
   </section>
+  
 	<section id="contents" class="row">
 		<article id="main">
 			<h2> The Specialty Coffee Association is a nonprofit, membership-based organization that represents thousands of coffee professionals, 

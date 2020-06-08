@@ -93,6 +93,13 @@ color: white;
 text-align:center;
 }
 
+body footer p {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin:0;
+      background: url(/resources/images/logo_jicas.png) no-repeat 50% 50%;
+    }
+    
  /*태블릿용.css*/
  @media all and (min-width:768px){
   /* 태블릿 공통 CSS */

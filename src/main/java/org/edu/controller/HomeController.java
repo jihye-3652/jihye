@@ -79,5 +79,9 @@ public class HomeController {
 
 		return "slide";
 	}
-	
+	@RequestMapping(value = "/hh", method = RequestMethod.GET)
+	public String hh(Locale locale, Model model) {
+
+		return "hh";
+	}
 }
