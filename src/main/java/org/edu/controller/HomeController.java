@@ -33,55 +33,67 @@ public class HomeController {
 
 		model.addAttribute("serverTime", formattedDate);
 
-		return "HOME";
+		return "home";
 	}
 
-	@RequestMapping(value = "/HTMLTEST", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/HTMLTEST", method = RequestMethod.GET)
 	public String HTMLTEST(Locale locale, Model model) {
 
-		return "HTMLTEST";
+		return "sample/HTMLTEST";
+	}
+	/**
+	 * 샘플 파일 홈 
+	 * @param locale
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/sample/", method = RequestMethod.GET)
+	public String sample(Locale locale, Model model) {
+
+		return "sample/HOME";
 	}
 
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/test", method = RequestMethod.GET)
 	public String test(Locale locale, Model model) {
 
-		return "test";
+		return "sample/test";
 	}
 
-	@RequestMapping(value = "/BLOG", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/BLOG", method = RequestMethod.GET)
 	public String BLOG(Locale locale, Model model) {
 
-		return "BLOG";
+		return "sample/BLOG";
 	}
-	@RequestMapping(value = "/WEARE", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/WEARE", method = RequestMethod.GET)
 	public String WEARE(Locale locale, Model model) {
 
-		return "WEARE";
+		return "sample/WEARE";
 	}
-	@RequestMapping(value = "/WORK", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/WORK", method = RequestMethod.GET)
 	public String WORK(Locale locale, Model model) {
 
-		return "WORK";
+		return "sample/WORK";
 	}
-	@RequestMapping(value = "/CONTACTUS", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/CONTACTUS", method = RequestMethod.GET)
 	public String CONTACTUS(Locale locale, Model model) {
 
-		return "CONTACTUS";
+		return "sample/CONTACTUS";
 	}
-	@RequestMapping(value = "/test2", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/test2", method = RequestMethod.GET)
 	public String test2(Locale locale, Model model) {
 
-		return "test2";
+		return "sample/test2";
 	}
 	/*slide page*/
-	@RequestMapping(value = "/slide", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/slide", method = RequestMethod.GET)
 	public String slide(Locale locale, Model model) {
 
-		return "slide";
+		return "sample/slide";
 	}
-	@RequestMapping(value = "/hh", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/hh", method = RequestMethod.GET)
 	public String hh(Locale locale, Model model) {
 
-		return "hh";
+		return "sample/hh";
 	}
+	
 }

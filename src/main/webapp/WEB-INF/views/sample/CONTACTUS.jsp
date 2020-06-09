@@ -400,21 +400,36 @@ cursor:pointer;
   /* 20px ÷ 844px*/
   }
 }
+
+
+    
+.go_top {
+	position: fixed;
+    right: 20px;
+    bottom: 112px;
+    text-align: center;
+    background: cadetblue;
+    z-index: 100;
+    padding: 20px;
+    opacity: 0.5;
+    color: white !important;
+    }
 </style>
 </head>
 <body>
 <div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
-				<a href="">LOGO</a>
-			</h1>
+		<a href="javascript:;"><img src="/resources/images/logo_JICAC.png"></a></h1>
+		<div class="hamberger"><a id="pull" href="javascript:;"></a></div>
+			
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
-					<li><a href="/WEARE">WE ARE</a></li>
-					<li><a href="/WORK">WORK</a></li>
-					<li><a href="/BLOG">BLOG</a></li>
-					<li><a href="/CONTACTUS">CONTACT US</a></li>
+					<li><a href="WEARE">WE ARE</a></li>
+					<li><a href="WORK">WORK</a></li>
+					<li><a href="BLOG">BLOG</a></li>
+					<li><a href="CONTACTUS">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
@@ -454,9 +469,9 @@ cursor:pointer;
 		 83790497994078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b293c64087a5b%3A0x1873dee0e6399a00!2z67Cx7ISd66y47ZmU64yA7ZWZ6rWQ!
 		 5e0!3m2!1sko!2skr!4v1513569521608"
 		 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		
-		<p class="copyright">LOGO</p>
+		<p class="copyright"></p>
 		</footer>
+		<a href="#" class="s_point"><p class="go_top">Back To Top</p></a>
 	</div>
   </body>
 </html>

@@ -95,31 +95,40 @@ line-height:1.6;
   /* 20px ÷ 844px*/
   }
   }
+  
+   .go_top {
+	position: fixed;
+    right: 20px;
+    bottom: 112px;
+    text-align: center;
+    background: cadetblue;
+    z-index: 100;
+    padding: 20px;
+    opacity: 0.5;
+    color: white !important;
+    }
 </style>
-
 </head>
-
 <body>
-
 <div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
-				<a href="">LOGO</a>
-			</h1>
+				<a href="javascript:;"><img src="/resources/images/logo_JICAC.png"></a></h1>
+				<div class="hamberger"><a id="pull" href="javascript:;"></a></div>
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
-					<li><a href="/WEARE">WE ARE</a></li>
-					<li><a href="/WORK">WORK</a></li>
-					<li><a href="/BLOG">BLOG</a></li>
-					<li><a href="/CONTACTUS">CONTACT US</a></li>
+					<li><a href="WEARE">WE ARE</a></li>
+					<li><a href="WORK">WORK</a></li>
+					<li><a href="BLOG">BLOG</a></li>
+					<li><a href="CONTACTUS">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 	    </header>
 		<article class="slider">
-            <img src="resources/images/aa.jpg" alt="LOGO">
+            <img src="/resources/images/aa.jpg" alt="LOGO">
         </article>
 	<hr class="divider">
 	<section class="blog-section">
@@ -156,6 +165,10 @@ line-height:1.6;
 			</ul>
 		</div>
 	</section>
+	<footer class="footer">
+			<p class="copyright"></p>
+		</footer>
+		<a href="#" class="s_point"><p class="go_top">Back To Top</p></a>
    </div>			
  </body>
 </html>

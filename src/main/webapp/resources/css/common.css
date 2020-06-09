@@ -96,9 +96,22 @@ text-align:center;
 body footer p {
       padding-top: 40px;
       padding-bottom: 40px;
-      margin:0;
+      margin:0 0;
       background: url(/resources/images/logo_jicas.png) no-repeat 50% 50%;
     }
+    
+    .go_top {
+	position: fixed;
+    right: 20px;
+    bottom: 112px;
+    text-align: center;
+    background: cadetblue;
+    z-index: 100;
+    padding: 20px;
+    opacity: 0.5;
+    color: white !important;
+    }
+    
     
  /*태블릿용.css*/
  @media all and (min-width:768px){

@@ -517,12 +517,25 @@ overflow:hidden;
   }
 }
 
+.go_top {
+	position: fixed;
+    right: 20px;
+    bottom: 112px;
+    text-align: center;
+    background: cadetblue;
+    z-index: 100;
+    padding: 20px;
+    opacity: 0.5;
+    color: white !important;
+    }
+
 </style>
+
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
 <!--사용자 스크립트  -->
 <script>
-				
+
 </script>
 <!-- 부트스트랩 -->
  <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -538,10 +551,10 @@ overflow:hidden;
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
-					<li><a href="/WEARE">WE ARE</a></li>
-					<li><a href="/WORK">WORK</a></li>
-					<li><a href="/BLOG">BLOG</a></li>
-					<li><a href="/CONTACTUS">CONTACT US</a></li>
+					<li><a href="WEARE">WE ARE</a></li>
+					<li><a href="WORK">WORK</a></li>
+					<li><a href="BLOG">BLOG</a></li>
+					<li><a href="CONTACTUS">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
@@ -744,6 +757,7 @@ overflow:hidden;
 		</section>
     </section>
     </section>
+    
     <footer class="footer">
 		 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.1908531424174!2d127.18028131558675!3d36.
 		 83790497994078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b293c64087a5b%3A0x1873dee0e6399a00!2z67Cx7ISd66y47ZmU64yA7ZWZ6rWQ!
@@ -753,6 +767,7 @@ overflow:hidden;
 		<p class="copyright"></p>
 		</footer>
 	</div>
+	<a href="#" class="s_point"><p class="go_top">Back To Top</p></a>
 	
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -775,5 +790,6 @@ overflow:hidden;
     </div>
   </div>
 </div>
+
 </body>
 </html>
