@@ -3,7 +3,7 @@ package kr.or.member;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.SocketException;
-import java.net.UnknownHostException;
+/*import java.net.UnknownHostException;*/
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -59,9 +59,12 @@ public class MainController {
 			timeClient.setDefaultTimeout(1000);
 			try {
 				timeClient.open();
+				//throw new RuntimeException();//강제 오류예외처리
 			} catch (SocketException e) {
 				System.out.println("open메서드 실행오류");
 				e.printStackTrace();
+			} finally {
+				System.out.println("이 부분은 성공/오류에 상관없이 항상 실행됩니다.");
 			}
 			InetAddress address = InetAddress.getByName(TIME_SERVER);
 		    TimeInfo timeInfo = timeClient.getTime(address);
