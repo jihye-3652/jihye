@@ -8,7 +8,11 @@ public class MemberService {
 		public void printMembers(MemberVO[] members) {
 			//향상된 for(loop)문 사용 (형태:단일값:전체)
 			for(MemberVO m : members) {//m1,m2,m3
-				System.out.println("이름은:" + m.getName() + "|나이는:" + m.getAge() + "|전화번호는:" + m.getPhoneNum());
+				System.out.println("------------------------------------");
+				/*System.out.println("이름:" + m.getName() + "|나이:" + m.getAge() + "|전화번호:" + m.getPhoneNum());*/
+				System.out.println(m.getName());
+				System.out.println(m.getAge());
+				System.out.println(m.getPhoneNum());
 			}
 		}
 	}

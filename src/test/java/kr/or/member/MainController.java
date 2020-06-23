@@ -2,7 +2,7 @@ package kr.or.member;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.SocketException;
+/*import java.net.SocketException;*/
 /*import java.net.UnknownHostException;*/
 
 import java.time.LocalDateTime;
@@ -17,7 +17,6 @@ import kr.or.member.MemberVO;
 
 public class MainController {
 
-
 		private static final String TIME_SERVER = "pool.ntp.org";
 
 		public static void main(String[] args) throws IOException {
@@ -28,18 +27,18 @@ public class MainController {
 			MemberVO m1 = new MemberVO();
 			// setter 메소드를 이용해 해당 인스턴스 변수(필드)에 값을 넣어준다.
 			
-			m1.setName("홍길동");
+			m1.setName("김지혜");
 			m1.setAge(45);
 			m1.setPhoneNum("000-0000-0000");
 			// 마찬가지로 다른 MemberVO 객체(instance)를 생성해서 값을 넣어준다.
 			MemberVO m2 = new MemberVO();
 			MemberVO m3 = new MemberVO();
-
-			m2.setName("성춘향");
+			
+			m2.setName("지혜");
 			m2.setAge(100);
 			m2.setPhoneNum("111-1111-1111");
 
-			m3.setName("각시탈");
+			m3.setName("김지혜2");
 			m3.setAge(3);
 			m3.setPhoneNum("222-2222-2222");
 
@@ -57,7 +56,8 @@ public class MainController {
 			System.out.println("-서버타임 출력하기-");
 			NTPUDPClient timeClient = new NTPUDPClient();
 			timeClient.setDefaultTimeout(1000);
-			try {
+			
+			/*try {
 				timeClient.open();
 				//throw new RuntimeException();//강제 오류예외처리
 			} catch (SocketException e) {
@@ -65,7 +65,8 @@ public class MainController {
 				e.printStackTrace();
 			} finally {
 				System.out.println("이 부분은 성공/오류에 상관없이 항상 실행됩니다.");
-			}
+			}*/
+			
 			InetAddress address = InetAddress.getByName(TIME_SERVER);
 		    TimeInfo timeInfo = timeClient.getTime(address);
 		    //서버로부터 시간 가져오는 코드

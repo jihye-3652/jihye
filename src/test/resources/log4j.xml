@@ -10,7 +10,25 @@
 		</layout>
 	</appender>
 	
+	<!-- 파일에 로그 찍기! -->
+    <appender name="fileLogger" class="org.apache.log4j.DailyRollingFileAppender"> <!-- ///////// new /////// -->
+    <appender name="fileLogger" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="./spring.Log"/>
+        <param name="Append" value="true"/>
+        <!-- 로그 파일 하나당 사이즈 1M -->
+        <param name="MaxFileSize" value="1000kb"/> <!-- 서버의 데이터가 설정 value값을 넘는경우 오래된 파일부터 삭제됨 -->
+        <!-- 최대 생성 파일수 ( 3개가 넘으면 순차적으로 파일이 삭제됨 -->
+		<param name="MaxBackupIndex" value="3" />
+	<!--<param name="dataPattern" value=".yyyy-MM-dd"/> -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5p: %F:%L - %m%n" />
+        </layout>
+    </appender>
+	
 	<!-- Application Loggers -->
+	<logger name="kr.or.test">
+		<level value="debug" />
+	</logger>
 	<logger name="org.edu.controller">
 		<level value="info" />
 	</logger>
@@ -27,15 +45,14 @@
 	<logger name="org.springframework.context">
 		<level value="info" />
 	</logger>
-
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
-
 	<!-- Root Logger -->
 	<root>
 		<priority value="info" />
 		<appender-ref ref="console" />
+		<appender-ref ref="fileLogger" />
 	</root>
 	
 </log4j:configuration>
