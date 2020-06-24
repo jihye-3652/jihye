@@ -40,6 +40,7 @@
 <!-- class는 이름에 공백이 있을시, 여러 클래스로 취급 -->
 <!-- 클래스명 사용시, 중복되지 않는 클래스 명으로 지정하여, 추후에 생길 수 있는 오류의 가능성을 배제한다. //ID=# //Class=. -->
 <!-- 버튼활성화는 되었으나, admin 화면에서 두가지 버튼이 동시 활성화 현상=> alert();을 이용하여 문제 확인 -->
+<!-- css와 jQuery는 연동. 항상 같이 사용한다고 생각하면 됨 -->
 <script>
 $(document).ready(function() {
     var current = location.pathname;

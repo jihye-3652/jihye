@@ -143,26 +143,44 @@
 			<scope>test</scope>
 		</dependency>
 		
-	<!-- 서버시간 가져오기 pom.xml -->
+		<!-- 스프링 Test사용 -->
 		<dependency>
-    		<groupId>commons-net</groupId>
-    		<artifactId>commons-net</artifactId>
-    	<version>3.6</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
 		</dependency>
-	<!-- hspl 데이터베이스 사용 -->	  
+		<!-- 서버시간 가져오기 pom.xml -->
+		<dependency>
+		    <groupId>commons-net</groupId>
+		    <artifactId>commons-net</artifactId>
+		    <version>3.6</version>
+		</dependency>
+		<!-- AOP 사용 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj-version}</version>
+		</dependency>
+		<!-- jdbc 사용 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<!-- hsql 데이터베이스 사용 -->
 		<dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>2.3.2</version>
-       </dependency>
-    <!-- mysql 데이터베이스 사용 -->
-	 	<dependency>
+        </dependency>
+        <!-- Mysql 데이터베이스 사용 -->
+        <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.35</version>
 		</dependency>
-	<!-- 마이바티스 사용 -->
-	<dependency>
+		<!-- 마이바티스 사용 --> 
+		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.2.8</version>
@@ -172,8 +190,8 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-	<!-- DB 디버그용 드라이버 -->
-	<dependency>
+		<!-- DB 디버그용 드라이버 -->
+		<dependency>
 			<groupId>org.bgee.log4jdbc-log4j2</groupId>
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 			<version>1.16</version>
@@ -200,8 +218,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>

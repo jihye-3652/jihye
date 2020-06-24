@@ -32,6 +32,7 @@
 <div class="box">
 <h2 class="head"><strong>스프링프레임웍 웹프로젝트 작업중 입니다.</strong></h2>
 	<h3 class="link"><a href="/sample/">반응형 홈페이지 포트폴리오 바로가기</a></h3>
+	<h3 class="link"><a href="/admin/">관리자 화면 바로가기</a></h3>
 	</div>
 </body>
 </html>

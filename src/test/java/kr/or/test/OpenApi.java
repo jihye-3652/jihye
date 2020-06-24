@@ -10,11 +10,12 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class OpenApi {
-
+// 인증키 복사 후 url 생성-> 복사 및  하단 string urlstr에 붙여넣기 및 실행. 
+//실제 테스트 페이지 및 이클립스 실행 페이지가 동일한지 확인.(연동여부 확인) 
 	//외부연계 메서드
 	public static void serviceApi() {
 		BufferedReader br = null; //HRD넷에서 전송받은 데이터를 일시저장하는 저수지와 같은 역할
-		String urlstr = "http://www.hrd.go.kr/jsp/HRDP/HRDPO00/HRDPOA60/HRDPOA60_1.jsp?returnType=XML"
+		String urlstr = "http://www.hrd.go.kr/jsp/HRDP/HRDPO00/HRDPOA60/HRDPOA60_1.jsp?returnType=XML&authKey=faKJdU2UMxBPQz0tEf81myesKJhy6xAq&pageNum=1&pageSize=10&srchTraStDt=20200624&srchTraEndDt=20200924&outType=1&sort=ASC&sortCol=TR_STT_DT"
 				+ "&authKey=yKt63a6Wtxfq282kkIdQAZVXtSlPW5GF&pageNum=1&pageSize=10"
 				+ "&authKey=인증키부분&pageNum=1&pageSize=10"
 				+ "&srchTraStDt=20200622&srchTraEndDt=20200922&outType=1&sort=ASC&sortCol=TR_STT_DT";
