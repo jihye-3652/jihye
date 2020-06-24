@@ -97,3 +97,451 @@
 [2020-06-24 15:06:21] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 12 ms.
 [2020-06-24 15:06:21] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Wed Jun 24 15:06:20 KST 2020]; root of context hierarchy
 [2020-06-24 15:06:21] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:02:02] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-24 17:02:02] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@50c87b21, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5f375618, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1810399e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32d992b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@215be6bb]
+[2020-06-24 17:02:02] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:02:03] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:02:03] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:02:03 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:03] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:03] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:02:03 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:03] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:02:03 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:03] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:02:03] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:02:04] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:02:04] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 16 ms.
+[2020-06-24 17:02:04] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+[2020-06-24 17:02:04] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:02:04] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375] to prepare test instance [org.edu.test.DataSourceTest@1951b871]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:178)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:395)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1627)
+	... 40 more
+[2020-06-24 17:02:04] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:02:04] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:02:04] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a7686a7: startup date [Wed Jun 24 17:02:04 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:04] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:02:04] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a7686a7: startup date [Wed Jun 24 17:02:04 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:04] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a7686a7: startup date [Wed Jun 24 17:02:04 KST 2020]; root of context hierarchy
+[2020-06-24 17:02:04] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:02:04] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:02:04] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:02:04] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 16 ms.
+[2020-06-24 17:02:04] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+[2020-06-24 17:02:04] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:02:04] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375] to prepare test instance [org.edu.test.DataSourceTest@13e3c1c7]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:178)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:395)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1627)
+	... 40 more
+[2020-06-24 17:10:42] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-24 17:10:42] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@50c87b21, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5f375618, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1810399e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32d992b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@215be6bb]
+[2020-06-24 17:10:42] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:10:43] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:10:43] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:10:43 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:43] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:43] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:10:43 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:43] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:10:43 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:43] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:10:43] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:10:43] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:10:43] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 16 ms.
+[2020-06-24 17:10:44] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+[2020-06-24 17:10:44] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:10:44] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375] to prepare test instance [org.edu.test.DataSourceTest@5c153b9e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:178)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:395)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1627)
+	... 40 more
+[2020-06-24 17:10:44] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:10:44] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:10:44] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a4ca3f6: startup date [Wed Jun 24 17:10:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:44] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:10:44] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@a4ca3f6: startup date [Wed Jun 24 17:10:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:44] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@a4ca3f6: startup date [Wed Jun 24 17:10:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:10:44] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:10:44] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:10:44] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:10:44] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 16 ms.
+[2020-06-24 17:10:44] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+[2020-06-24 17:10:44] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:10:44] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375] to prepare test instance [org.edu.test.DataSourceTest@4721d212]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.NoClassDefFoundError: org/edu/dao/IF_MEmberDAO (wrong name: org/edu/dao/IF_MemberDAO)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:178)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:395)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1627)
+	... 40 more
+[2020-06-24 17:20:38] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-24 17:20:38] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@50c87b21, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5f375618, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1810399e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32d992b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@215be6bb]
+[2020-06-24 17:20:38] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:20:39] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:20:40] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:20:40 KST 2020]; root of context hierarchy
+[2020-06-24 17:20:40] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:20:40] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:20:40 KST 2020]; root of context hierarchy
+[2020-06-24 17:20:40] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:20:40 KST 2020]; root of context hierarchy
+[2020-06-24 17:20:40] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:20:40] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:20:40] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:20:40] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 0 ms.
+[2020-06-24 17:20:41] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:20:40 KST 2020]; root of context hierarchy
+[2020-06-24 17:20:41] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-24 17:21:42] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-24 17:21:42] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@50c87b21, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5f375618, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1810399e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32d992b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@215be6bb]
+[2020-06-24 17:21:42] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-24 17:21:44] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jihye\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-24 17:21:44] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:21:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:21:44] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/member/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.memberList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/admin/board/list],methods=[GET]}" onto public java.lang.String org.edu.controller.AdminContorller.boardList(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/hh],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.hh(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLTEST],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLTEST(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/BLOG],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.BLOG(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WEARE],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WEARE(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/WORK],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.WORK(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/CONTACTUS],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.CONTACTUS(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/test2],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.test2(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-24 17:21:44] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:21:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:21:44] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:21:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:21:44] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-24 17:21:44] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-24 17:21:44] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-24 17:21:44] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 0 ms.
+[2020-06-24 17:21:45] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@464bee09: startup date [Wed Jun 24 17:21:44 KST 2020]; root of context hierarchy
+[2020-06-24 17:21:45] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
