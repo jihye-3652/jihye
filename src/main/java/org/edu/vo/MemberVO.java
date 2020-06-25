@@ -9,7 +9,7 @@ public class MemberVO {
 	  private String user_name; 
 	  private String email; 
 	  private Integer point; 
-	  private Boolean enabled; 
+	  private boolean enabled; 
 	  private String levels; 
 	  private Date reg_date; 
 	  private Date update_date;
@@ -44,10 +44,10 @@ public class MemberVO {
 	public void setPoint(Integer point) {
 		this.point = point;
 	}
-	public Boolean getEnabled() {
+	public boolean getEnabled() {
 		return enabled;
 	}
-	public void setEnabled(Boolean enabled) {
+	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
 	public String getLevels() {
