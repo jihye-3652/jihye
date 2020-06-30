@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../include/header.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file="../include/header.jsp"  %>
 
- <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -19,11 +20,10 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    
-     <div class="col-12">
+      <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">멤버 검색</h3>
+                <h3 class="card-title">게시판 검색</h3>
                 </div>
                 </div>
                 </div>
@@ -33,19 +33,16 @@
                         </select>
                         </div>
                         <div class="search" style="display:inline">
-     <input type="text" placeholder="">
+     <input type="text" name="search_keyword" placeholder="">
 <div class="button" style="display:inline">
-     <button>검색</button>
+     <button name="btn_search">검색</button>
 </div>
 <div class="button" style="display:inline">
-     <button>새사용자등록</button>
+     <button>새글쓰기</button>
      </div>
                         </div>
     
 </div>
-    
-    
-    
         <div class="col-12">
             <div class="card">
               <div class="card-header">
@@ -66,25 +63,25 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>user_id</th>
-                      <th>user_name[point]</th>
-                      <th>email</th>
-                      <th>Use</th>
+                      <th>BNO</th>
+                      <th>TITLE</th>
+                      <th>WRITE</th>
                       <th>REGDATE</th>
-                      <th>level</th>
+                      <th>VIEWCNT</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>user02</td>
-                      <td>user02[0]</td>
-                      <td>user02@edu.com</td>
-                      <td><span class="tag tag-success">true</span></td>
-                      <td>2019-10-15 10:41</td>
-                      <td><small class="badge badge-danger">ROLE_ADMIN</small></td>
+                  <c:forEach items="${boardList}" var="boardVO" varStatus="status">
+                  <tr>
+                      <td>${boardVO.bno}</td>
+                      <td><a href="/admin/board/view?bno=${boardVO.bno}">${boardVO.title}</a></td>
+                      <td>${board.writer}</td>
+                      <td><span class="tag tag-success">${boardVO.regdate}</span></td>
+                      <td><span class="badge badge-danger right">${boardVO.view_count}</span></td>
                     </tr>
+                  </c:forEach>  
                   </tbody>
-            <td> <button type="submit" class="btn btn-primary">CREATE</button>
+            <td> <a href="/admin/board/write" class="btn btn-primary">CREATE</a>
                </td>
            <td>
               <nav aria-label="Contacts Page Navigation">
@@ -102,6 +99,7 @@
  
     
     </div>
-    <!-- /.content-header -->
+    <!-- /Content Wrapper. Contains page content -->
 
-<%@include file="../include/footer.jsp" %>
+
+<%@ include file="../include/footer.jsp"  %>

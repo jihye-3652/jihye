@@ -6,21 +6,28 @@
 -- 생성 시간: 19-10-20 06:33
 -- 서버 버전: 5.7.26
 -- PHP 버전: 5.6.40
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
 --
 -- 데이터베이스: `edu`
 --
+
 -- --------------------------------------------------------
+
 --
 -- 테이블 구조 `tbl_attach`
 --
+
 DROP TABLE IF EXISTS `tbl_attach`;
 CREATE TABLE IF NOT EXISTS `tbl_attach` (
   `full_name` varchar(150) NOT NULL,
@@ -29,16 +36,21 @@ CREATE TABLE IF NOT EXISTS `tbl_attach` (
   PRIMARY KEY (`full_name`),
   KEY `fk_board_attach` (`bno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- 테이블의 덤프 데이터 `tbl_attach`
 --
+
 INSERT INTO `tbl_attach` (`full_name`, `bno`, `regdate`) VALUES
 ('/2019/10/20/s_6628ae49-d5d6-4911-a79e-5728b513cfb6_웹툰사이트.jpg', 205, '2019-10-20 02:10:47'),
 ('/2019/10/20/s_cf415fbe-754b-4d47-9ecd-0339438dc24f_logo.png', 205, '2019-10-20 02:10:47');
+
 -- --------------------------------------------------------
+
 --
 -- 테이블 구조 `tbl_board`
 --
+
 DROP TABLE IF EXISTS `tbl_board`;
 CREATE TABLE IF NOT EXISTS `tbl_board` (
   `bno` int(11) NOT NULL AUTO_INCREMENT,
@@ -51,9 +63,11 @@ CREATE TABLE IF NOT EXISTS `tbl_board` (
   `reply_count` int(11) DEFAULT '0',
   PRIMARY KEY (`bno`)
 ) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8;
+
 --
 -- 테이블의 덤프 데이터 `tbl_board`
 --
+
 INSERT INTO `tbl_board` (`bno`, `title`, `content`, `writer`, `regdate`, `update_date`, `view_count`, `reply_count`) VALUES
 (1, '수정된 글입니다.', '수정 테스트 ', 'user00', '2019-10-10 03:20:01', '2019-10-10 03:20:01', 0, 0),
 (3, '새로운 글을 넣습니다. ', '새로운 글을 넣습니다. ', 'user00', '2019-10-10 03:25:36', '2019-10-10 03:25:36', 0, 0),
@@ -253,10 +267,13 @@ INSERT INTO `tbl_board` (`bno`, `title`, `content`, `writer`, `regdate`, `update
 (213, '새로운 글을 넣습니다. ', '새로운 글을 넣습니다. ', 'user00', '2019-10-19 08:58:18', '2019-10-19 08:58:18', 0, 0),
 (214, '새로운 글을 넣습니다. ', '새로운 글을 넣습니다. ', 'user00', '2019-10-19 08:58:18', '2019-10-19 08:58:18', 0, 0),
 (215, '새로운 글을 넣습니다. ', '새로운 글을 넣습니다. ', 'user00', '2019-10-19 08:58:18', '2019-10-20 02:42:20', 1, 0);
+
 -- --------------------------------------------------------
+
 --
 -- 테이블 구조 `tbl_member`
 --
+
 DROP TABLE IF EXISTS `tbl_member`;
 CREATE TABLE IF NOT EXISTS `tbl_member` (
   `user_id` varchar(50) NOT NULL,
@@ -270,18 +287,20 @@ CREATE TABLE IF NOT EXISTS `tbl_member` (
   `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- 테이블의 덤프 데이터 `tbl_member`
 --
 
-INSERT INTO `tbl_member` (`user_id`, `user_pw`, `user_name`, `email`, `point`, `enabled`, `level`, `reg_date`, `update_date`) VALUES
 INSERT INTO `tbl_member` (`user_id`, `user_pw`, `user_name`, `email`, `point`, `enabled`, `levels`, `reg_date`, `update_date`) VALUES
 ('user02', '$2a$10$kIqR/PTloYan/MRNiEsy6uYO6OCHVmAKR4kflVKQkJ345nqTiuGeO', 'user02', 'user02@edu.com', 0, 1, 'ROLE_ADMIN', '2019-10-15 10:41:44', '2019-10-15 10:41:44');
 
 -- --------------------------------------------------------
+
 --
 -- 테이블 구조 `tbl_reply`
 --
+
 DROP TABLE IF EXISTS `tbl_reply`;
 CREATE TABLE IF NOT EXISTS `tbl_reply` (
   `rno` int(11) NOT NULL AUTO_INCREMENT,
@@ -293,9 +312,11 @@ CREATE TABLE IF NOT EXISTS `tbl_reply` (
   PRIMARY KEY (`rno`),
   KEY `fk_board` (`bno`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
 --
 -- 테이블의 덤프 데이터 `tbl_reply`
 --
+
 INSERT INTO `tbl_reply` (`rno`, `bno`, `replytext`, `replyer`, `regdate`, `update_date`) VALUES
 (1, 15, '1:댓글을 수정   MOD', 'user02', '2019-10-17 02:39:01', '2019-10-18 01:52:51'),
 (5, 15, '댓글 내용 테스트 입니다.', 'test2', '2019-10-17 09:12:31', '2019-10-18 06:16:21'),
@@ -308,20 +329,24 @@ INSERT INTO `tbl_reply` (`rno`, `bno`, `replytext`, `replyer`, `regdate`, `updat
 (13, 15, 'REPLY TEXT11', 'test6', '2019-10-17 10:02:56', '2019-10-17 10:02:56'),
 (14, 15, 'REPLY TEXT14', 'REPLYER', '2019-10-18 00:12:52', '2019-10-18 06:11:17'),
 (15, 15, '테스트 댓글 내용 입니다.15', '사용자', '2019-10-18 06:14:46', '2019-10-18 06:35:28');
+
 --
 -- 덤프된 테이블의 제약사항
 --
+
 --
 -- 테이블의 제약사항 `tbl_attach`
 --
 ALTER TABLE `tbl_attach`
   ADD CONSTRAINT `fk_board_attach` FOREIGN KEY (`bno`) REFERENCES `tbl_board` (`bno`);
+
 --
 -- 테이블의 제약사항 `tbl_reply`
 --
 ALTER TABLE `tbl_reply`
   ADD CONSTRAINT `fk_board` FOREIGN KEY (`bno`) REFERENCES `tbl_board` (`bno`);
 COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

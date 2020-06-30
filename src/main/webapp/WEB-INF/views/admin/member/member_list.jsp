@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
 
  <!-- Content Wrapper. Contains page content -->
@@ -19,10 +20,11 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-      <div class="col-12">
+    
+     <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">게시판 검색</h3>
+                <h3 class="card-title">멤버 검색</h3>
                 </div>
                 </div>
                 </div>
@@ -32,16 +34,19 @@
                         </select>
                         </div>
                         <div class="search" style="display:inline">
-     <input type="text" name="search_keyword" placeholder="">
+     <input type="text" placeholder="">
 <div class="button" style="display:inline">
-     <button name="btn_search">검색</button>
+     <button>검색</button>
 </div>
 <div class="button" style="display:inline">
-     <button>새글쓰기</button>
+     <button>새사용자등록</button>
      </div>
                         </div>
     
 </div>
+    
+    
+    
         <div class="col-12">
             <div class="card">
               <div class="card-header">
@@ -62,46 +67,30 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>BNO</th>
-                      <th>TITLE</th>
-                      <th>WRITE</th>
+                      <th>user_id</th>
+                      <th>user_name[point]</th>
+                      <th>email</th>
+                      <th>Use</th>
                       <th>REGDATE</th>
-                      <th>VIEWCNT</th>
+                      <th>level</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>130</td>
-                      <td>홈페이지 오픈 테스트</td>
-                      <td>kim ilguk</td>
-                      <td><span class="tag tag-success">2019-10-19 08:58</span></td>
-                      <td><span class="badge badge-danger right">1</span></td>
-                    </tr>
-                    <tr>
-                      <td>124</td>
-                      <td>새로운 글을 넣습니다.</td>
-                      <td>user00</td>
-                      <td><span class="tag tag-warning">2019-10-19 08:58</span></td>
-                      <td><span class="badge badge-danger right">0</span></td>
-                    </tr>
-                    <tr>
-                      <td>123</td>
-                      <td>새로운 글을 넣습니다.</td>
-                      <td>user00</td>
-                      <td><span class="tag tag-primary">2019-10-19 08:58</span></td>
-                      <td><span class="badge badge-danger right">0</span></td>
-                    </tr>
-                    <tr>
-                      <td>122</td>
-                      <td>새로운 글을 넣습니다.</td>
-                      <td>user00</td>
-                      <td><span class="tag tag-danger">2019-10-19 08:58</span></td>
-                      <td><span class="badge badge-danger right">0</span></td>
-                      </tr>
+                   
+                      <c:forEach items="${memberList}" var="memberVO" varStatus="status">
+                      <tr>
+                     	 <td>${memberVO.user_id}</td>
+                     	 <td><a href="/admin/member/view?user_id=${memberVO.user_id}">${memberVO.user_name}</a></td>
+                    	 <td>${memberVO.email}</td>
+                   	     <td><span class="tag tag-success">${memberVO.enabled}</span></td>
+                     	 <td>${memberVO.reg_date}</td>
+                     	 <td><small class="badge badge-danger">${memberVO.levels}</small></td>
+                   	  </tr> 
+                      </c:forEach>
                   </tbody>
-            <td> <button type="submit" class="btn btn-primary">CREATE</button>
-               </td>
-           <td>
+                
+            	<td><a href="/admin/member/write" class="btn btn-primary">CREATE</a></td>
+           		<td>
               <nav aria-label="Contacts Page Navigation">
             <ul class="pagination justify-content-center m-0">
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -117,6 +106,6 @@
  
     
     </div>
-    <!-- Content Wrapper. Contains page content -->
+    <!-- /.content-header -->
 
-<%@include file="../include/footer.jsp" %> 
+<%@include file="../include/footer.jsp" %>
