@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ include file="../include/header.jsp"%>
-<!-- Content Wrapper. Contains page content -->
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file="../include/header.jsp" %>
+   
+         <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
          <!-- Content Header (Page header) -->
          <div class="content-header">
@@ -31,21 +32,21 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                     <form role="form" action="/admin/board/update" method="post" enctype="multipart/form-date">
+                     <form role="form" action="/admin/board/update" method="post" encType="multipart/form-data">
                         <div class="row">
                            <div class="col-sm-12">
                               <!-- text input -->
                               <div class="form-group">
                                  <label>Title</label> 
-                                 <input value ="${boardVO.title}" name="title" type="text" class="form-control"
+                                 <input value="${boardVO.title}" name="title"type="text" class="form-control"
                                     placeholder="Enter Title">
                               </div>
                            </div>
                            <div class="col-sm-12">
                               <div class="form-group">
                                  <label>Content</label> 
-                                 <textarea name="content" class="form-control" rows="3"
-                                    placeholder="Enter Writer"></textarea>
+                                 <textarea name="content"class="form-control" rows="3"
+                                    placeholder="Enter Writer">${boardVO.content}</textarea>
                               </div>
                            </div>
                         </div>
@@ -54,7 +55,7 @@
                               <!-- textarea -->
                               <div class="form-group">
                                  <label>Writer</label>
-                                 <input value="${boardVO.writer}" name="writer" type="text"
+                                 <input value="${boaedVO.writer}" name="writer"type="text"
                                     class="form-control" placeholder="Enter ...">
                               </div>
                            </div>
@@ -78,19 +79,21 @@
                                  </div>
                               </div>
                               <div class="buttons">
-                              	 <input type="hidden" name="bno" value="${boardVO.bno}">
-                                 <button type="submit" class="btn btn-warning">Submit</button>
-                                 <a href="/admin/board/list" class="btn btn-outline-danger">LIST ALL</a>
-                     
+                                 <input type="hidden" name="bno" value="${boardVO.bno}">
+                                 <button type="submit" class="btn btn-warning">SUBMIT</button>
+                                 <a href="/admin/board/list" class="btn btn-primary">LIST ALL</a>
                               </div>
                            </div>
                         </div>
                      </form>
                   </div>
                   <!-- /.content-header -->
+                  <!-- Main content -->
+                  <div class="content"></div>
+                  <!-- .content  -->
                </div>
             </div>
          </div>
       </div>
-      <!-- ./Content Wrapper -->
-<%@ include file="../include/footer.jsp"%>
+      <!-- /ContentWrapper -->
+<%@ include file="../include/footer.jsp" %> 

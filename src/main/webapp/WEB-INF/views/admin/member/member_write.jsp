@@ -89,7 +89,7 @@
                         </select>
                      <br>
                      <div class = "buttons">
-                           <button type="submit" class="btn btn-warning">Submit</button>
+                           <button type="submit" class="btn btn-warning">SUBMIT</button>
                            <a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
                         </div>
                         </div>

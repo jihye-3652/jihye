@@ -31,7 +31,7 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                     <form role="form" action="/admin/board/write" method="post" enctype="multipart/form-date">
+                     <form role="form" action="/admin/board/write" method="post" enctype="multipart/form-data">
                         <div class="row">
                            <div class="col-sm-12">
                               <!-- text input -->
@@ -78,7 +78,7 @@
                                  </div>
                               </div>
                               <div class="buttons">
-                                 <button type="submit" class="btn btn-warning">Submit</button>
+                                 <button type="submit" class="btn btn-warning">SUBMIT</button>
                                  <a href="/admin/board/list" class="btn btn-outline-danger">LIST ALL</a>
                      
                               </div>
