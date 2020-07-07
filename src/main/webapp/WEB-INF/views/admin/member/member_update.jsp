@@ -73,7 +73,7 @@
                               <div class="col-sm-12">
                               <div class="form-group">
                                  <label>point</label>
-                                  <input value="${memberVO.point} name="point" type="text" class="form-control"
+                                  <input value="${memberVO.point}" name="point" type="text" class="form-control"
                                     placeholder="0">
                               </div>
                            </div>

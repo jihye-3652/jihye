@@ -68,4 +68,9 @@ public class BoardServiceImpl implements IF_BoardService {
 		return boardDAO.selectAttach(bno);
 	}
 
+	@Override
+	public int countBno(PageVO pageVO) throws Exception {
+		return boardDAO.countBno(pageVO);
+	}
+
 }
