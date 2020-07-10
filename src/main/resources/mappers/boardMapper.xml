@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="org.edu.dao.IF_BoardDAO">
    <!-- 공통사용 검색쿼리 -->
-   <sql id="sqlwhere">
+   <sql id="sqlWhere">
    <if test="searchType !=null"><!-- null이 아닐 때 실행-->
       AND (
       title LIKE CONCAT('%',#{searchKeyword},'%')
@@ -34,9 +34,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    <select id="selectBoard" resultType="org.edu.vo.BoardVO">  
       SELECT * FROM tbl_board
       WHERE 1 = 1<!-- 조건문이 더 들어갈 수 있어서 AND때문에 강제조건 삽입 -->
-      <include refid="sqlwhere"></include>
+      <include refid="sqlWhere"></include>
       ORDER BY bno DESC
-      LIMIT #{startBno}, #{perPageNum}
+      LIMIT #{startNo}, #{perPageNum}
    </select>
    <select id="countBno" resultType="int">
       select count(*) from tbl_board

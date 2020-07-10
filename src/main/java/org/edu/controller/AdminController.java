@@ -18,6 +18,7 @@ import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -200,11 +201,17 @@ public class AdminController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/admin/member/list", method = RequestMethod.GET)
-	public String memberList(Locale locale, Model model) throws Exception {
-		List<MemberVO> list = memberService.selectMember();
+	public String memberList(@ModelAttribute("pageVO") PageVO pageVO, Locale locale, Model model) throws Exception {
+		if(pageVO.getPage() == null) {
+			pageVO.setPage(1);
+		}
+		pageVO.setPerPageNum(10);
+		pageVO.setTotalCount(memberService.countUserId(pageVO));
+		List<MemberVO> list = memberService.selectMember(pageVO);
 		//모델클래스로 jsp화면으로 memberService에서 셀렉트한 list값을 memberList변수명으로 보낸다.
 		//model { list -> memberList -> jsp }
 		model.addAttribute("memberList", list);
+		model.addAttribute("pageVO", pageVO);
 		return "admin/member/member_list";
 	}
 	
@@ -213,7 +220,7 @@ public class AdminController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/admin/member/view", method = RequestMethod.GET)
-	public String memberView(@RequestParam("user_id") String user_id, Locale locale, Model model) throws Exception {
+	public String memberView(@ModelAttribute("pageVO") PageVO pageVO, @RequestParam("user_id") String user_id, Locale locale, Model model) throws Exception {
 		MemberVO memberVO = memberService.viewMember(user_id);
 		model.addAttribute("memberVO", memberVO);
 		return "admin/member/member_view";
@@ -229,27 +236,46 @@ public class AdminController {
 		return "admin/member/member_write";
 	}
 	@RequestMapping(value = "/admin/member/write", method = RequestMethod.POST)
-	public String memberWrite(MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+	public String memberWrite(@Valid MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//1234
+		if(new_pw !="") {
+			//스프링 시큐리티 4.x BCryptPasswordEncoder 암호화 사용
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);//1234
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전 값 set 시킴.
+		}
 		memberService.insertMember(memberVO);
 		rdat.addFlashAttribute("msg", "입력");
 		return "redirect:/admin/member/list";
+		
 	}
+	
+	
+	
 	
 	/**
 	 * 회원관리 > 수정 입니다.
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/admin/member/update", method = RequestMethod.GET)
-	public String memberUpdate(@RequestParam("user_id") String user_id, Locale locale, Model model) throws Exception {
+	public String memberUpdate(@ModelAttribute("pageVO") PageVO pageVO, @RequestParam("user_id") String user_id, Locale locale, Model model) throws Exception {
 		MemberVO memberVO = memberService.viewMember(user_id);
 		model.addAttribute("memberVO", memberVO);
+		model.addAttribute("pageVO", pageVO);
 		return "admin/member/member_update";
 	}
 	@RequestMapping(value = "/admin/member/update", method = RequestMethod.POST)
-	public String memberUpdate(MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+	public String memberUpdate(@ModelAttribute("pageVO") PageVO pageVO, MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//1234
+		if(new_pw !="") {
+			//스프링 시큐리티 4.x BCryptPasswordEncoder 암호화 사용
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);//1234
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전 값 set 시킴.
+		}
 		memberService.updateMember(memberVO);
 		rdat.addFlashAttribute("msg", "수정");
-		return "redirect:/admin/member/view?user_id=" + memberVO.getUser_id();
+		return "redirect:/admin/member/view?user_id=" + memberVO.getUser_id() + "&page=" + pageVO.getPage();
 	}
 	
 	/**
