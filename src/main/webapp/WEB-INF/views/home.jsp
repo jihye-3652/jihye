@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ include file="include/header.jsp" %>
 <!-- Content Wrapper. Contains page content -->
 	<div id="container">
@@ -68,13 +70,84 @@
 			<h2>ABOUT JICA <b>TOP3 ARTICLES</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
-					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">
-							<img class="img_topplace" src="/resources/home/img/caffeine.png" alt="OOOO OOOOO" />
-							<h3>COFFEE, CAFFEINE & HEALTH</h3>
-							<p class="txt">Independent research by scientists worldwide continues to link coffee to significant (and surprising) healthful properties.</p>
+				<c:forEach items="${boardList}" var="boardVO" varStatus="status">
+						<c:if test="${status.count <= 3}">
+						<li><a href="/board/view?bno=${boardVO.bno}">
+								<!-- 첨부파일이 있을때 if -->
+								<c:if test="${boardVO.files[0] != null }">
+									<c:set var="extName" value="${fn:split(boardVO.files[0],'.')}" />
+									<c:set var="ext" value="${extName[fn:length(extName)-1]}" />
+									<!-- 첨부파일이 있는데 이미지일때와 이미지가 아닐때 choose -->
+									<c:choose>
+										<c:when test="${fn:containsIgnoreCase(extNameArray, ext)}">
+											<img src="/download?filename=${boardVO.files[0]}" title="첨부파일 이미지" style="width:100%;">
+										</c:when>
+										<c:otherwise>
+											<img class="img_topplace" src="/resources/home/img/img_topplace01.jpg" alt="이미지 없음" />
+										</c:otherwise>
+									</c:choose>
+								</c:if>
+								<!-- 첨부파일이 없을때 if -->
+								<c:if test="${boardVO.files[0] == null }">
+									<img class="img_topplace" src="/resources/home/img/img_topplace01.jpg" alt="이미지 없음" />
+								</c:if>
+								<h3>${boardVO.title}</h3>
+								<p class="txt">${boardVO.content}</p>
+								<span class="view">VIEW</span></a>
+							</a>
+						</li>
+						</c:if>
+				</c:forEach>
+					<!-- <li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.space_pop').show();">
+							<img class="img_topplace" src="/resources/home/img/coffee_education.png" alt="OOOO OOOOO" />
+							<h3>COFFEE EDUCATION</h3>
+							<p class="txt">Industry Education and Insight for Coffee Professionals.</p>
+							<span class="view">VIEW</span></a>
+					</li> -->
+					<!-- <li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.program_pop').show();">
+							<img class="img_topplace" src="/resources/home/img/whats_coffee.png" alt="OOOO OOOOO" />
+							<h3>What is Coffee?</h3>
+							<p class="txt">Everyone recognizes a roasted coffee bean, but you might not recognize an actual coffee plant.</p>
 							<span class="view">VIEW</span></a>
 					</li>
 					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.space_pop').show();">
+							<img class="img_topplace" src="/resources/home/img/coffee_education.png" alt="OOOO OOOOO" />
+							<h3>COFFEE EDUCATION</h3>
+							<p class="txt">Industry Education and Insight for Coffee Professionals.</p>
+							<span class="view">VIEW</span></a>
+					</li> -->
+					
+					<%-- <c:forEach items="${boardList}" var="boardVO" varStatus="status">
+						<c:if test="${status.count <= 3}">
+						<li><a href="/board/view?bno=${boardVO.bno}">
+								<!-- 첨부파일이 있을때 if -->
+								<c:if test="${boardVO.files[0] != null }">
+									<c:set var="extName" value="${fn:split(boardVO.files[0],'.')}" />
+									<c:set var="ext" value="${extName[fn:length(extName)-1]}" />
+									<!-- 첨부파일이 있는데 이미지일때와 이미지가 아닐때 choose -->
+									<c:choose>
+										<c:when test="${fn:containsIgnoreCase(extNameArray, ext)}">
+											<img src="/download?filename=${boardVO.files[0]}" title="첨부파일 이미지" style="width:100%;">
+										</c:when>
+										<c:otherwise>
+											<img class="img_topplace" src="/resources/home/img/img_topplace01.jpg" alt="이미지 없음" />
+										</c:otherwise>
+									</c:choose>
+								</c:if>
+								<!-- 첨부파일이 없을때 if -->
+								<c:if test="${boardVO.files[0] == null }">
+									<img class="img_topplace" src="/resources/home/img/img_topplace01.jpg" alt="이미지 없음" />
+								</c:if>
+								
+								<h3>${boardVO.title}</h3>
+								<p class="txt">${boardVO.content}</p>
+								<span class="view">VIEW</span></a>
+						</li>
+						</c:if>
+					</c:forEach> --%>
+					
+					<!-- articles of nca -->
+					<!-- <li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.space_pop').show();">
 							<img class="img_topplace" src="/resources/home/img/coffee_education.png" alt="OOOO OOOOO" />
 							<h3>COFFEE EDUCATION</h3>
 							<p class="txt">Industry Education and Insight for Coffee Professionals.</p>
@@ -84,8 +157,7 @@
 							<img class="img_topplace" src="/resources/home/img/whats_coffee.png" alt="OOOO OOOOO" />
 							<h3>What is Coffee?</h3>
 							<p class="txt">Everyone recognizes a roasted coffee bean, but you might not recognize an actual coffee plant.</p>
-							<span class="view">VIEW</span></a>
-					</li>
+							<span class="view">VIEW</span></a> -->
 				</ul>
 			</div>
 		</div>
@@ -100,18 +172,19 @@
 					<a href="/resources/home/javascript:;">전화 상담 신청</a>
 				</p>
 				<div class="bbs_line">
-					<h3>NOTICE</h3>
+					<h3><a href="/board/list">NOTICE</a></h3>
 					<ul class="notice_recent">
-						<li><a href="/resources/home/javascript:;">OOOO OOOOO (스프링OOOO OOOOO)</a></li>
-						<li><a href="/resources/home/javascript:;">OOOO OOOOOOOOO OOOOO</a></li>
-						<li><a href="/resources/home/javascript:;">OOOO OOOOO/OOOO OOOOO</a></li>
-						<li><a href="/resources/home/javascript:;">OOOO OOOOO OPEN! (스프링정보, OOOO OOOOO)</a></li>
-						<li><a href="/resources/home/javascript:;">OOOO OOOOO 서비스 점검 안내</a></li>
+					 <c:forEach items="${boardList}" var="boardVO" varStatus="status">
+						<li><a href="/board/view?bno=${boardVO.bno}">${boardVO.title}</a></li>
+						
+					</c:forEach>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!-- //app_area -->
+		
+		
 		
 	</div>
 	<!-- .//Content Wrapper. Contains page content -->
