@@ -195,7 +195,7 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 /* about_area */
 .about_area {}
 .about_area h2 {padding:55px 0 105px; text-align:center; font-size:40px;}
-.about_area .about_box {background:#f4f0e9;}
+.about_area .about_box {background:#e8eff4;} /* background:#f4f0e9 */
 .about_area .place_list {}
 .about_area .place_list li {float:left; width:32%; margin-left:2%; text-align:center; position:relative; top:-50px;}
 .about_area .place_list li:first-child {margin-left:0;}
@@ -207,7 +207,7 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 /* app_area */
 .appbbs_area {padding:60px 0;}
 .appbbs_area .appbbs_box {}
-.appbbs_box .app_line {float:left; width:66%; box-sizing:border-box; padding:45px 0; text-align:center; background:url(../img/marble_pink.jpg) repeat; font-size:0;}
+.appbbs_box .app_line {float:left; width:66%; box-sizing:border-box; padding:45px 0; text-align:center; background:url(../img/marble_blue.jpg) repeat; font-size:0;}
 .appbbs_box .app_line a {display:inline-block; width:42.4%; height:100px; line-height:100px; box-sizing:border-box; padding-left:75px; text-align:left; background:rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%; border:2px solid #fff; margin-right:10px; font-size:26px; color:#fff; vertical-align:middle;}
 .appbbs_box .app_line a + a {margin-right:0; padding-left:85px;background-image:url(../img/ico_phone.png);}
 .appbbs_box .bbs_line {float:right; width:30%;}
