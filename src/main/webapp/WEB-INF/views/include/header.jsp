@@ -44,7 +44,7 @@ if('${msg}' != ""){
 						<li><span style="color:#fff">${session_username}님 [${session_userid}] 환영합니다!</span>
 						<li><a href="/logout">LOGOUT</a></li>
 						<c:if test="${session_levels eq 'ROLE_ADMIN'}"> 
-							<li><a href="/admin">관리자</a></li>
+							<li><a href="/admin">ADMINISTRATOR</a></li>
 						</c:if>
 					</c:when>
 					<c:otherwise>
@@ -56,23 +56,34 @@ if('${msg}' != ""){
 				</ul>	
 				<nav>
 				<ul class="gnb clear">
-					<li><a href="/sample" class="openAll1">포트폴리오</a>
+					<li><a href="/sample" class="openAll1"><b>PORTFOLIO</b></a>
                         <div class="gnb_depth gnb_depth2_1">
                             <ul class="submenu_list">
-                                <li><a href="/sample/">원페이지</a></li>
-                                <li><a href="/sample/slide">슬라이드</a></li>
+                                <li><a href="/sample/">ONE PAGE WEBSITE</a></li>
+                                <li><a href="/sample/slide">SLIDE</a></li>
                             </ul>
                         </div>
 					</li>
-					<li><a href="/board/list" class="openAll2">고객센터</a>
+					
+	        		<li><a href="/board/list" class="openAll2"><b>NEWS</b></a>
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
-                                <li><a href="/board/list">공지사항</a></li>
-                               
+                            <li><a href="/board/list">JICA NEWS</a></li>
+                            <li><a href="#">NEWSLETTERS</a></li>
+                            <li><a href="#">COVID-19 UPDATES</a></li>
+                            </ul>
+                        </div>
+                     </li>
+                        
+                    <li><a href="/board/list" class="openAll3"><b>ABOUT</b></a>
+				        <div class="gnb_depth gnb_depth2_3">
+                            <ul class="submenu_list">
+                            	<li><a href="#">ABOUT JICA</a></li>
+                                <li><a href="#">WORK WITH US</a></li>
+                               	<li><a href="#">CONTACT US</a></li>
                             </ul>
                         </div>
 					</li>
-	        
 				</ul>
                 </nav>
 				<p class="closePop"><a href="#">닫기</a></p>

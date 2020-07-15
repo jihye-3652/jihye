@@ -72,5 +72,12 @@ public class BoardDAOImpl implements IF_BoardDAO {
 		return sqlSession.selectOne(mapperQuery + ".countBno", pageVO);
 	}
 
+	//조회수 증가표시 IF_BoardDAO (13 line)Integer 추가 후 하단에 return값 없이 추가
+	@Override
+	public void updateViewCount(Integer bno) throws Exception {
+		sqlSession.update(mapperQuery + ".updateViewCount", bno);
+		
+	}
+
 	
 }

@@ -9,6 +9,8 @@ public interface IF_BoardDAO {
 	public void insertBoard(BoardVO boardVO) throws Exception;
 	public List<BoardVO> selectBoard(PageVO pageVO) throws Exception;
 	public void updateBoard(BoardVO boardVO) throws Exception;
+	//조회수 증가표시
+	public void updateViewCount(Integer bno) throws Exception;
 	public void deleteBoard(Integer bno) throws Exception;
 	public BoardVO viewBoard(Integer bno) throws Exception;
 	public void insertAttach(String fullName) throws Exception;

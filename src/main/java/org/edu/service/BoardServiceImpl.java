@@ -60,6 +60,8 @@ public class BoardServiceImpl implements IF_BoardService {
 
 	@Override
 	public BoardVO viewBoard(Integer bno) throws Exception {
+		//boardDAO,IFboardDAO 내용추가 후 하단에 매개변수 bno 넣어서 추가.
+		boardDAO.updateViewCount(bno);
 		return boardDAO.viewBoard(bno);
 	}
 

@@ -134,8 +134,8 @@
                 </div>
                 </div>
                 <div class="col-1" style="display:inline-block" >
-                        <select class="form-control">
-                          <option>--</option>
+                        <select id="searchType" class="form-control">
+                          <option>----</option>
                         </select>
                         </div>
                         <div class="search" style="display:inline">
@@ -179,22 +179,22 @@
                   <tbody>
                     <tr>
                       <td>130</td>
-                      <td>홈페이지 오픈 테스트</td>
-                      <td>kim ilguk</td>
+                      <td>PAGE OPEN TEST</td>
+                      <td>JIHYE KIM</td>
                       <td><span class="tag tag-success">2019-10-19 08:58</span></td>
                       <td><span class="badge badge-danger right">1</span></td>
                     </tr>
                     <tr>
                       <td>124</td>
-                      <td>새로운 글을 넣습니다.</td>
-                      <td>user00</td>
+                      <td>MYSMZ</td>
+                      <td>Jihye</td>
                       <td><span class="tag tag-warning">2019-10-19 08:58</span></td>
                       <td><span class="badge badge-danger right">0</span></td>
                     </tr>
                     <tr>
                       <td>123</td>
-                      <td>새로운 글을 넣습니다.</td>
-                      <td>user00</td>
+                      <td>CYFGM</td>
+                      <td>Jihye</td>
                       <td><span class="tag tag-primary">2019-10-19 08:58</span></td>
                       <td><span class="badge badge-danger right">0</span></td>
                     </tr>
@@ -232,7 +232,6 @@
 	</div>
 	<!-- .content  -->
 
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -260,11 +259,34 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script><!-- min=간결 -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<script>
+//============고전적인 자바스크립트 방식============//
+function myFunc() {   //function 함수이름(){ }
+   alert('TEST PAGE');
+}
+myFunc();//함수호출(콜)==실행
+//============JQuery 스크립트 방식 ============//
+$(document).ready(function(){//함수명 없이 실행 콜백 함수.
+   alert('TEST PAGE2');
+   var cnt = 131;
+   $(".btn-primary").bind("click",function(event){
+   		$("<tr><td>"+cnt+"</td><td>Just wanna go home.</td><td>Jihye</td><td>2020.07.15</td><td>100</td><tr>").prependTo("table");
+   		cnt = cnt + 1;
+   });
+   
+   $("table thead tr").css({"background-color":"pink"});
+   //$("#searchType").css({"width":"150px"});//jquary JS
+   //document.getElementById("searchType").style.width="200px"//original JS
+   //$(".btn-primary").css({"background-color":"green"});
+   //$("tr").css("background","blue");
+   //$("tr").css({"background-color":"pink", "color":"blue"});
+});
+</script>
 
 </body>
 </html>
